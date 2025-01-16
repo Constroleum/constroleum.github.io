@@ -1,29 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const heroSection = document.querySelector('.hero');
+    const video = document.getElementById('hero-video');
 
-    const images = [
-        heroSection.getAttribute('data-background'),
-        heroSection.getAttribute('data-background-alt'),
-        heroSection.getAttribute('data-background-alt-2')
-    ];
+    // Si deseas controlar el video de alguna manera (pausar, reproducir, etc.),
+    // puedes añadir eventos como estos:
 
-    let currentImageIndex = 0;
-
-    // Cambiar el fondo de la sección hero con efecto fade
-    function changeBackground() {
-        heroSection.classList.remove('fade-in');
-        setTimeout(() => {
-            heroSection.style.backgroundImage = `url(${images[currentImageIndex]})`;
-            heroSection.classList.add('fade-in');
-        }, 200); // Tiempo para permitir el fade-out
-    }
-
-    // Cambiar la imagen cada 5 segundos
-    setInterval(() => {
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-        changeBackground();
-    }, 5000);
-
-    // Inicializar el fondo con la primera imagen
-    changeBackground();
+    // Por ejemplo, poner en pausa cuando el usuario hace clic en el video
+    video.addEventListener('click', () => {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    });
 });

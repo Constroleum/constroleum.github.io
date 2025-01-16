@@ -20,14 +20,19 @@
         </nav>
     </header>
 
-    <!-- Sección Hero -->
-    <section id="home" class="hero" 
-        data-background="images\Dona al Jardi.jpg"
-        data-background-alt="images\El gat roig.jpg"
-        data-background-alt-2="images\Comunio.jpg">
+    <!-- Sección Hero (Video de portada) -->
+    <section id="home" class="hero">
         <h1>Descubre mi <span class="highlight">Arte</span></h1>
         <p>Transformando ideas en obras que trascienden.</p>
         <a href="#gallery" class="btn">Explorar Galería</a>
+
+        <!-- Video de fondo (en la carpeta 'videos') -->
+        <div class="video-background">
+            <video autoplay muted loop id="hero-video">
+                <source src="videos/video portada.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+            </video>
+        </div>
     </section>
 
     <!-- Galería -->
