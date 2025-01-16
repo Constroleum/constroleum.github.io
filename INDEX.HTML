@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Pere Lluís León</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">Pere Lluís León</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section id="home" class="hero">
+        <h1>Explora mi arte</h1>
+    </section>
+
+    <!-- Galería -->
+    <section id="gallery" class="gallery">
+        <div class="grid">
+            <div class="item" style="background-image: url('img1.jpg');">
+                <div class="overlay">Título 1</div>
+            </div>
+            <div class="item" style="background-image: url('img2.jpg');">
+                <div class="overlay">Título 2</div>
+            </div>
+            <div class="item" style="background-image: url('img3.jpg');">
+                <div class="overlay">Título 3</div>
+            </div>
+            <!-- Más ítems de la galería -->
+        </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="about" class="about">
+        <h2>Sobre mí</h2>
+        <p>Soy Pere Lluís León, un artista apasionado por capturar la esencia de la humanidad a través de mis obras. Mi trabajo explora temas como...</p>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="contact">
+        <h2>Contacto</h2>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
