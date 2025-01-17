@@ -17,17 +17,38 @@ body {
     background-color: #222;
     color: #fff;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.header .logo {
-    font-size: 1.5rem;
+/* Estilo para el contenedor del logo */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para la imagen del logo */
+.logo-img {
+    width: 60px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Estilo para el texto debajo del logo */
+.logo-text {
+    font-size: 22px;
     font-weight: bold;
+    color: #fff;
+}
+
+.nav-menu {
+    display: flex;
+    margin-top: 10px;
 }
 
 .nav-links {
@@ -46,10 +67,59 @@ body {
     color: #ff9800;
 }
 
+/* Estilo del botón hamburguesa */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+/* Estilos para el menú en dispositivos móviles */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #222;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        max-height: 0;
+    }
+
+    .nav-menu.open {
+        display: flex;
+        max-height: 300px; /* Ajusta según el contenido */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
 /* Hero */
 .hero {
     position: relative;
-    height: 100vh;
+    height: 65vh;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -57,32 +127,9 @@ body {
     align-items: center;
     text-align: center;
     overflow: hidden;
+    padding: 50px 20px; /* Márgenes generosos */
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero .highlight {
-    color: #ff9800;
-}
-
-.hero .btn {
-    background-color: #ff9800;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.hero .btn:hover {
-    background-color: #e67e22;
-}
-
-/* Video de fondo */
 .video-background {
     position: absolute;
     top: 0;
@@ -97,37 +144,91 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.7; /* Opcional: para darle un efecto de transparencia */
+    opacity: 0.7;
 }
 
-/* Galería */
-.gallery {
-    padding: 50px 20px;
-    background-color: #fff;
+.hero-text {
+    position: relative;
+    z-index: 1;
 }
 
-.gallery h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2rem;
-    color: #333;
+.hero-overlay {
+    position: absolute;
+    top: -100px; /* Incremento del tamaño */
+    left: -100px; /* Incremento del tamaño */
+    right: -100px; /* Incremento del tamaño */
+    bottom: -100px; /* Incremento del tamaño */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
 }
 
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h3 {
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+.hero .highlight {
+    color: #ffbb00;
+}
+
+.hero .btn {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #e67e22;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin: 20px 0;
+}
+
+.hero .btn {
+    margin-top: 20px;
+}
+
+
+/* Estilo general para la galería */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;
 }
 
+/* Cada ítem de la galería */
 .item {
     position: relative;
-    height: 200px;
+    height: 600px;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
     overflow: hidden;
 }
 
+/* Overlay del ítem */
 .item .overlay {
     position: absolute;
     top: 0;
@@ -143,8 +244,48 @@ body {
     transition: opacity 0.3s;
 }
 
+/* Mostrar el overlay cuando se pasa el cursor por encima */
 .item:hover .overlay {
     opacity: 1;
+}
+
+/* Detalles del ítem (título, precio y botón) */
+.item-details {
+    text-align: center;
+    display: none; /* Por defecto, ocultamos los detalles */
+}
+
+.item:hover .item-details {
+    display: block; /* Mostramos los detalles cuando se hace hover */
+}
+
+/* Estilo del título */
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Estilo del precio */
+.price {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ffbb00; /* Un color llamativo */
+}
+
+/* Estilo del botón */
+.btn-offer {
+    background-color: #ff9800;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-offer:hover {
+    background-color: #e67e22;
 }
 
 /* Sobre mí */
@@ -152,6 +293,45 @@ body {
     padding: 50px 20px;
     background-color: #f0f0f0;
     text-align: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
 }
 
 /* Contacto */
