@@ -1,5 +1,8 @@
 {
-  "dependencies": {
-    "serve": "^14.2.4"
+  "scripts": {
+    "start": "http-server"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
   }
 }
