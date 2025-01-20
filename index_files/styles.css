@@ -212,20 +212,22 @@ body {
 
 .gallery__title {
   padding: 3rem 2rem;
+  text-align: center;
 }
 
 /* Estilo general para la galería */
 .gallery__content {
-  padding: 0 2rem;
+  padding: 0 4rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  max-width: auto;
 }
 
 /* Cada ítem de la galería */
 .item {
   position: relative;
-  height: 600px;
+  height: 450px;
   background-size: cover;
   background-position: center;
   border-radius: 10px;
