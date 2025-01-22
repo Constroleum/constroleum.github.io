@@ -28,14 +28,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Obtener todos los ítems de la galería
     const galleryItems = document.querySelectorAll('.item');
   
-    // Añadir un evento de clic a cada ítem
     galleryItems.forEach(item => {
-      item.addEventListener('click', (event) => {
-        const imgUrl = event.currentTarget.style.backgroundImage.slice(5, -2); // Extraer la URL de la imagen
+      const overlay = item.querySelector('.overlay');
+      const button = item.querySelector('.btn-offer');
   
-        modal.style.display = "flex"; // Mostrar el modal
-        modalImg.src = imgUrl; // Establecer la fuente de la imagen
-      });
+      if (overlay) {
+        // Evento para abrir el modal desde el overlay
+        overlay.addEventListener('click', (event) => {
+          // Verificar si el clic fue en el botón y evitar abrir el modal
+          if (event.target.closest('.btn-offer')) {
+            return; // Si se hace clic en el botón, no abrir el modal
+          }
+  
+          const imgUrl = item.style.backgroundImage.slice(5, -2); // Extraer la URL de la imagen
+          modal.style.display = "flex"; // Mostrar el modal
+          modalImg.src = imgUrl; // Establecer la fuente de la imagen
+        });
+      }
+  
+      // Evento del botón "Contact for sale"
+      if (button) {
+        button.addEventListener('click', (event) => {
+          event.stopPropagation(); // Detener la propagación del clic al overlay
+          console.log('Botón "Contact for sale" clickeado.');
+          // Aquí puedes añadir la lógica específica del botón
+        });
+      }
     });
   
     // Cerrar el modal al hacer clic en el botón de cierre
