@@ -1,431 +1,440 @@
 /* Estilos generales */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  color: #333;
-  background-color: #f9f9f9;
-  line-height: 1.6;
-}
-
-/* Encabezado */
-.header {
-  background-color: #493030;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-/* Estilo para el contenedor del logo */
-.logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Estilo para la imagen del logo */
-.logo-img {
-  width: 60px; /* Ajusta el tamaño según sea necesario */
-  height: auto;
-  margin-bottom: 15px;
-}
-
-/* Estilo para el texto debajo del logo */
-.logo-text {
-  font-size: 22px;
-  font-weight:lighter;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-.nav-menu {
-  display: flex;
-  margin-top: 10px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  text-transform: uppercase;
-}
-
-.nav-links li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.nav-links li a:hover {
-  color: #ff9800;
-}
-
-.logo-link {
-  text-decoration: none; /* Elimina la línea debajo del enlace */
-  color: inherit; /* Mantén el color del texto original */
-  display: flex; /* Asegura que el texto y la imagen estén alineados correctamente */
-  align-items: center; /* Centra verticalmente la imagen y el texto */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
   
-}
-
-/* Estilo del botón hamburguesa */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: #fff;
-  border-radius: 2px;
-  transition: all 0.3s;
-}
-
-/* Estilos para el menú en dispositivos móviles */
-@media (max-width: 768px) {
+  body {
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+  }
+  
+  /* Encabezado */
+  .header {
+    background-color: #493030;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Estilo para el contenedor del logo */
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Estilo para la imagen del logo */
+  .logo-img {
+    width: 60px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo para el texto debajo del logo */
+  .logo-text {
+    font-size: 22px;
+    font-weight: lighter;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
   .nav-menu {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    text-transform: uppercase;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #ff9800;
+  }
+  
+  .logo-link {
+    text-decoration: none; /* Elimina la línea debajo del enlace */
+    color: inherit; /* Mantén el color del texto original */
+    display: flex; /* Asegura que el texto y la imagen estén alineados correctamente */
+    align-items: center; /* Centra verticalmente la imagen y el texto */
+  }
+  
+  /* Estilo del botón hamburguesa */
+  .hamburger {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: #222;
-    border-radius: 5px;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    max-height: 0;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
   }
-
-  .nav-menu.open {
+  
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  
+  /* Estilos para el menú en dispositivos móviles */
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: #222;
+      border-radius: 5px;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      max-height: 0;
+    }
+  
+    .nav-menu.open {
+      display: flex;
+      max-height: 300px; /* Ajusta según el contenido */
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .hamburger {
+      display: block;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+  }
+  
+  /* Hero */
+  .hero {
+    position: relative;
+    height: 65vh;
+    color: #fff;
     display: flex;
-    max-height: 300px; /* Ajusta según el contenido */
-  }
-
-  .nav-links {
     flex-direction: column;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 50px 20px; /* Márgenes generosos */
   }
-
-  .hamburger {
+  
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  #hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+  }
+  
+  .hero-text {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: -100px; /* Incremento del tamaño */
+    left: -100px; /* Incremento del tamaño */
+    right: -100px; /* Incremento del tamaño */
+    bottom: -100px; /* Incremento del tamaño */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .hero h3 {
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-bottom: 20px;
+  }
+  
+  .hero .highlight {
+    color: #ffbb00;
+  }
+  
+  .hero .btn {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .hero .btn:hover {
+    background-color: #e67e22;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    margin: 20px 0;
+  }
+  
+  .hero .btn {
+    margin-top: 20px;
+  }
+  
+  .gallery__title {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  /* Estilo general para la galería */
+  .gallery__content {
+    padding: 0 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    max-width: auto;
+  }
+  
+  /* Cada ítem de la galería */
+  .item {
+    position: relative;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Overlay del ítem */
+  .item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s;
+    cursor: pointer; /* Cambio del cursor a "manita" */
+}
+  
+  /* Mostrar el overlay cuando se pasa el cursor por encima */
+  .item:hover .overlay {
+    opacity: 1;
   }
-}
+  
+  /* Detalles del ítem (título, precio y botón) */
+  .item-details {
+    text-align: center;
+    display: none; /* Por defecto, ocultamos los detalles */
+    pointer-events: none; /* Evitar interferencias con el overlay */
+  }
+  
+  .item:hover .item-details {
+    display: block; /* Mostramos los detalles cuando se hace hover */Ç
+    pointer-events: none; /* Mantener el cursor en el overlay */
+  }
+  
+  /* Estilo del título */
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo del precio */
+  .price {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ffbb00; /* Un color llamativo */
+  }
+  
+  /* Estilo del botón */
+  .btn-offer {
+    background-color: #ff9800;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-offer:hover {
+    background-color: #e67e22;
+  }
 
-/* Hero */
-.hero {
-  position: relative;
-  height: 65vh;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  padding: 50px 20px; /* Márgenes generosos */
-}
-
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-
-#hero-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.7;
-}
-
-.hero-text {
-  position: relative;
-  z-index: 1;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: -100px; /* Incremento del tamaño */
-  left: -100px; /* Incremento del tamaño */
-  right: -100px; /* Incremento del tamaño */
-  bottom: -100px; /* Incremento del tamaño */
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: -1;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.hero h3 {
-  font-size: 1rem;
-  font-weight: lighter;
-  margin-bottom: 20px;
-}
-
-.hero .highlight {
-  color: #ffbb00;
-}
-
-.hero .btn {
-  background-color: #000000;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.hero .btn:hover {
-  background-color: #e67e22;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  margin: 20px 0;
-}
-
-.hero .btn {
-  margin-top: 20px;
-}
-
-.gallery__title {
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
-/* Estilo general para la galería */
-.gallery__content {
-  padding: 0 4rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 15px;
-  max-width: auto;
-}
-
-/* Cada ítem de la galería */
-.item {
-  position: relative;
-  height: 450px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-/* Overlay del ítem */
-.item .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-/* Mostrar el overlay cuando se pasa el cursor por encima */
-.item:hover .overlay {
-  opacity: 1;
-}
-
-/* Detalles del ítem (título, precio y botón) */
-.item-details {
-  text-align: center;
-  display: none; /* Por defecto, ocultamos los detalles */
-}
-
-.item:hover .item-details {
-  display: block; /* Mostramos los detalles cuando se hace hover */
-}
-
-/* Estilo del título */
-.title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-/* Estilo del precio */
-.price {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: #ffbb00; /* Un color llamativo */
-}
-
-/* Estilo del botón */
-.btn-offer {
-  background-color: #ff9800;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.btn-offer:hover {
-  background-color: #e67e22;
-}
-
-/* Estilos para el modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 80%;
-  max-height: 80%;
-  object-fit: contain;
-}
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-  color: #f00;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Sobre mí */
-.about {
-  padding: 50px 20px;
-  background-color: #f0f0f0;
-  text-align: center;
-}
-
-.about-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-.about-image {
-  position: relative;
-  width: 200px;
-  height: 200px;
-}
-
-.about-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-}
-
-.about-text {
-  max-width: 600px;
-}
-
-.about-text h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.about-text p {
-  font-size: 1.2rem;
-  color: #666;
-  line-height: 1.6;
-}
-
-/* Contacto */
-.contact {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.contact form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact input,
-.contact textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.contact .btn {
-  background-color: #ff9800;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.contact .btn:hover {
-  background-color: #e67e22;
-}
-
-/* Footer */
-.footer {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
+  .modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+  }
+  
+  .modal-content {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto; /* Mostrar la imagen con su ancho original */
+    height: auto; /* Mostrar la imagen con su alto original */
+    object-fit: contain; /* Asegurar que la imagen no se deforme */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añadir sombra */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #f00;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Sobre mí */
+  .about {
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .about-image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .about-text {
+    max-width: 600px;
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .about-text p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Contacto */
+  .contact {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact .btn {
+    background-color: #ff9800;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact .btn:hover {
+    background-color: #e67e22;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  

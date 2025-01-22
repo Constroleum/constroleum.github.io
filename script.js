@@ -2,62 +2,54 @@ document.addEventListener('DOMContentLoaded', () => {
     const video = document.getElementById('hero-video');
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
-
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modalImg');
+    const closeBtn = document.getElementById('closeBtn');
+  
     // Control del video
-    video.addEventListener('click', () => {
+    if (video) {
+      video.addEventListener('click', () => {
         if (video.paused) {
-            video.play();
+          video.play();
         } else {
-            video.pause();
+          video.pause();
         }
-    });
-
+      });
+    }
+  
     // Control del menú hamburguesa
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('open');
-        hamburger.classList.toggle('active');
+    if (hamburger && navMenu) {
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('open'); // Abrir o cerrar el menú
+        hamburger.classList.toggle('active'); // Cambiar el estilo del icono hamburguesa
+      });
+    }
+  
+    // Obtener todos los ítems de la galería
+    const galleryItems = document.querySelectorAll('.item');
+  
+    // Añadir un evento de clic a cada ítem
+    galleryItems.forEach(item => {
+      item.addEventListener('click', (event) => {
+        const imgUrl = event.currentTarget.style.backgroundImage.slice(5, -2); // Extraer la URL de la imagen
+  
+        modal.style.display = "flex"; // Mostrar el modal
+        modalImg.src = imgUrl; // Establecer la fuente de la imagen
+      });
     });
-
-
-  // Seleccionar todos los ítems de la galería
-  const items = document.querySelectorAll(".gallery .item");
-
-  items.forEach((item) => {
-    // Obtener la URL de fondo
-    const bgImage = item.style.backgroundImage;
-
-    // Extraer el nombre del archivo
-    const fileName = bgImage.match(/\/([^\/]+)\.jpeg/)[1]; // Captura el nombre del archivo sin la extensión
-
-    // Asignar el nombre del archivo al título
-    item.querySelector(".title").textContent = fileName.replace(/_/g, " "); // Reemplazar guiones bajos con espacios
+  
+    // Cerrar el modal al hacer clic en el botón de cierre
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        modal.style.display = "none"; // Ocultar el modal
+      });
+    }
+  
+    // Cerrar el modal al hacer clic fuera de la imagen
+    window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none"; // Ocultar el modal
+      }
+    });
   });
-
-  // Obtén los elementos de la galería y el modal
-const galleryItems = document.querySelectorAll('.item');
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modalImg');
-const closeBtn = document.getElementById('closeBtn');
-
-// Abre la ventana modal con la imagen clickeada
-galleryItems.forEach(item => {
-  item.addEventListener('click', () => {
-    const imageUrl = item.getAttribute('data-image');
-    modal.style.display = 'block';
-    modalImg.src = imageUrl;
-  });
-});
-
-// Cierra la ventana modal al hacer clic en el botón de cerrar
-closeBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-// Cierra la ventana modal si el usuario hace clic fuera de la imagen
-window.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    modal.style.display = 'none';
-  }
-});
-
-})
+  
