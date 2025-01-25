@@ -20,7 +20,6 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    position: sticky;
     top: 0;
     z-index: 1000;
   }
@@ -261,6 +260,7 @@
     opacity: 0;
     transition: opacity 0.3s;
     cursor: pointer; /* Cambio del cursor a "manita" */
+    z-index: 1;
 }
   
   /* Mostrar el overlay cuando se pasa el cursor por encima */
@@ -270,14 +270,18 @@
   
   /* Detalles del ítem (título, precio y botón) */
   .item-details {
+    position: relative;
     text-align: center;
     display: none; /* Por defecto, ocultamos los detalles */
     pointer-events: none; /* Evitar interferencias con el overlay */
+    z-index: 2;
+   
   }
   
   .item:hover .item-details {
     display: block; /* Mostramos los detalles cuando se hace hover */Ç
-    pointer-events: none; /* Mantener el cursor en el overlay */
+    pointer-events: auto; /* Mantener el cursor en el overlay */
+
   }
   
   /* Estilo del título */
