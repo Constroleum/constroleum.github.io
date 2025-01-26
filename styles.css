@@ -552,8 +552,103 @@ body {
   }
 }
 
+/* Contacto */
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
+.contact form {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Asegura que los campos estén uno encima del otro */
+  gap: 20px; /* Espaciado entre los campos */
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
+.contact label {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px; /* Añadir espacio entre la etiqueta y el campo */
+}
 
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f7f7f7;
+  transition: border-color 0.3s ease;
+}
 
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+  border-color: #ff9800;
+  box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+}
 
+.contact textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact button {
+  background-color: #ff9800;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact button:hover {
+  background-color: #e67e22;
+  transform: scale(1.05);
+}
+
+.contact button:focus {
+  outline: none;
+}
+
+/* Animación de hover sobre el botón */
+.contact button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact {
+    padding: 40px 10px;
+  }
+
+  .contact form {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .contact input,
+  .contact textarea {
+    font-size: 0.95rem;
+  }
+
+  .contact button {
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+}
