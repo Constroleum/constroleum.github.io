@@ -17,14 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // JavaScript para alternar la clase 'open' en el menú hamburguesa
-  if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      navMenu.classList.toggle('open');
-    });
-  }
-
   // Obtener todos los ítems de la galería
   const galleryItems = document.querySelectorAll('.item');
 
