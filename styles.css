@@ -558,13 +558,14 @@ body {
   text-align: center;
   background-color: #f9f9f9;
   display: flex;
+  max-width: 600px;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
 .contact form {
-  max-width: 600px;
+  max-width: 400px;
   width: 100%;
   display: flex;
   flex-direction: column; /* Asegura que los campos estén uno encima del otro */
