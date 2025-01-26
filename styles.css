@@ -424,39 +424,108 @@ body {
   line-height: 1.6;
 }
 
-/* Contacto */
-.contact {
-  padding: 50px 20px;
-  text-align: center;
+/* Pagina de contacto */
+.contact-page {
+  display: flex;
+  width: 100%;
+
+  height: 90vh;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
 }
 
-.contact form {
-  max-width: 500px;
-  margin: 0 auto;
+.contact-image {
+  flex: 1;
+  width: 50%;  /* Ajuste para que ocupe el 50% de la pantalla */
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-form {
+  flex: 1;
+  padding: 40px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  justify-content: center;
+  width: 50%;  /* Ajuste para que ocupe el 50% de la pantalla */
 }
 
-.contact input,
-.contact textarea {
-  width: 100%;
+.contact-title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input, textarea {
   padding: 10px;
+  font-size: 1rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
-.contact .btn {
-  background-color: #ff9800;
+input:focus, textarea:focus {
+  border-color: #ff9800;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
   color: #fff;
-  padding: 10px;
+  background-color: #333;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
 }
 
-.contact .btn:hover {
-  background-color: #e67e22;
+.submit-btn:hover {
+  background-color: #ff9800;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .contact-page {
+    flex-direction: column;  /* Cambia la dirección a columna en pantallas pequeñas */
+  }
+
+  .contact-image {
+    display: none;  /* Oculta la imagen en pantallas pequeñas */
+  }
+
+  .contact-form {
+    width: 100%;  /* El formulario ocupa todo el ancho en pantallas pequeñas */
+    padding: 20px;  /* Reduce el padding para más espacio en pantallas pequeñas */
+  }
 }
 
 /* Footer */
@@ -465,6 +534,7 @@ body {
   color: #fff;
   text-align: center;
   padding: 20px;
+  margin-top: 20px;
 }
 
 
