@@ -69,4 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.style.display = "none"; // Ocultar el modal
     }
   });
+
+  hamburger.addEventListener('click', () => {
+    console.log("Hamburger clicked!");  // Mensaje de depuración
+    navMenu.classList.toggle('open');
+    hamburger.classList.toggle('open');
+  });
+  
 });
