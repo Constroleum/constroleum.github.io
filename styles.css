@@ -547,6 +547,13 @@ textarea {
   padding: 40px;
 }
 
+/* Media Queries para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .article-grid {
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+}
+
 .article-item {
   background-color: #fff;
   border-radius: 10px;
