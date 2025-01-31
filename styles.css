@@ -576,7 +576,10 @@ textarea {
 
 /* Contenido */
 .article-content {
+  display: block;
   padding: 20px;
+  justify-content: center;
+
 }
 
 .article-title {
@@ -584,11 +587,14 @@ textarea {
   font-weight: bold;
   color: #333;
   margin-bottom: 10px;
-  transition: color 0.3s ease;
+  transition: color 0.4s ease;
+  text-align: center;
+
 }
 
 .article-title:hover {
   color: #ff9800;
+ 
 }
 
 .article-description {
@@ -596,19 +602,39 @@ textarea {
   color: #666;
   margin-bottom: 15px;
   line-height: 1.6;
+
 }
 
 .btn-article {
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
   background-color: #ff9800;
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 40px;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+ 
 }
 
 .btn-article:hover {
   background-color: #e67e22;
+  
+}
+
+.article-date {
+font-size: 1rem;
+color: #e67e22;
+margin-bottom: 15px;
+justify-content: left;
+text-align: center;
+}
+
+.spacer {
+  width: 50px;
+  height: 2px;
+  background-color: #ccc; /* Asegurar que se vea */
+  margin: 20px auto 30px auto; /* Esto lo centra horizontalmente */
 }
