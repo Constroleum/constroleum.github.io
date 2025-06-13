@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pere Lluís León</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/Logo.png" type="image/x-icon">
+  <meta name="description" content="Galeria de Pere Lluís León">
+  <meta name="keywords" content="pere lluis leon, artwork, art, painter, barcelona, spain, painting, impressionist, expressionist">
+  <meta name="author" content="Pere Lluís León">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pere Lluís León - Artista y Pintor">
+  <meta property="og:description" content="Obras de arte singulares y únicas de Pere Lluís León, un artista extraordinario con el taller en Premià de Mar, en la provincia de Barcelona. Contactar para exposiciones, compra y encargos!">
+  <meta property="og:url" content="https://www.perelluisleon.art">
+  <meta property="og:image" content="https://constroleum.com/images/Perfil.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header class="header">
+    <a href="index.html" class="logo-link">
+      <div class="logo-container">
+        <img src="images/logo.png" alt="Logo de Pere Lluís León" class="logo-img">
+        <div class="logo-text">Pere Lluís León</div>
+      </div>
+    </a>
+    <button class="hamburger" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="index.html">home</a></li>
+        <li><a href="gallery.html">gallery</a></li>
+        <li><a href="exhibitions.html">Exhibitions</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="press.html">press</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Galería -->
+  <section id="gallery" class="gallery">
+    <h2 class="gallery__title">Exhibition @Art·Tek Gallery Barcelona</h2>
+    <div class="gallery__content">
+      <!-- Ítems de la galería -->
+      <div class="item" style="background-image: url('images/Exhibicions/ArTek/ArTek10.jpeg');"></div>
+      <div class="item" style="background-image: url('images/Exhibicions/ArTek/ArTek1.jpeg');"></div>
+      <div class="item" style="background-image: url('images/Exhibicions/ArTek/ArTek2.jpeg');"></div>
+      <div class="item" style="background-image: url('images/Exhibicions/ArTek/ArTek3.jpeg');"></div>
+      <div class="item" style="background-image: url('images/Exhibicions/ArTek/ArTek4.jpeg');"></div>
+      <div class="item" style="background-image: url('images/Exhibicions/ArTek/ArTek5.jpeg');"></div>
+      <div class="item" style="background-image: url('images/Exhibicions/ArTek/ArTek6.jpeg');"></div>
+      <div class="item" style="background-image: url('images/Exhibicions/ArTek/ArTek7.jpeg');"></div>
+      <div class="item" style="background-image: url('images/Exhibicions/ArTek/ArTek8.jpeg');"></div>
+      <div class="item" style="background-image: url('images/Exhibicions/ArTek/ArTek9.jpeg');"></div>
+      <div class="item" style="background-image: url('images/Exhibicions/ArTek/ArTek10.jpeg');"></div>
+      <div class="item" style="background-image: url('images/Exhibicions/ArTek/ArTek11.jpeg');"></div>
+    </div>
+
+    <!-- Ventana Modal para mostrar la imagen -->
+    <div id="modal" class="modal">
+      <span id="closeBtn" class="close">&times;</span>
+      <img id="modalImg" class="modal-content" alt="Imagen a tamaño completo">
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Pere Lluís León. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
