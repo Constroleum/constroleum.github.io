@@ -161,6 +161,12 @@ body {
   color: #ff9800;
 }
 
+.link {
+  color:#ff9800;
+  font-style: normal;
+  font-weight: bold;
+}
+
 /* En pantallas grandes el menú sigue visible */
 @media (min-width: 769px) {
   .hamburger {
