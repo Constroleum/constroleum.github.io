@@ -161,11 +161,14 @@ body {
   color: #ff9800;
 }
 
-.link {
-  color:#ff9800;
-  font-style: normal;
-  font-weight: bold;
-}
+a.link {
+    color: black;        /* Cambia el color del texto */
+    text-decoration: none; /* Quita el subrayado */
+  }
+
+  a.link:hover {
+    color: darkred;      /* Opcional: cambia de color al pasar el ratón */
+  }
 
 /* En pantallas grandes el menú sigue visible */
 @media (min-width: 769px) {
@@ -645,3 +648,4 @@ text-align: center;
   background-color: #ccc; /* Asegurar que se vea */
   margin: 20px auto 30px auto; /* Esto lo centra horizontalmente */
 }
+
