@@ -162,12 +162,12 @@ body {
 }
 
 a.link {
-    color: black;        /* Cambia el color del texto */
+    color: #ff9800;        /* Cambia el color del texto */
     text-decoration: none; /* Quita el subrayado */
   }
 
   a.link:hover {
-    color: darkred;      /* Opcional: cambia de color al pasar el ratón */
+    color: #fff;      /* Opcional: cambia de color al pasar el ratón */
   }
 
 /* En pantallas grandes el menú sigue visible */
