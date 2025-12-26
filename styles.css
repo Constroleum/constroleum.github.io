@@ -14,7 +14,7 @@ body {
 
 /* Encabezado */
 .header {
-  background-color: #282424;
+  background-color: #4b3c3c;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -541,7 +541,7 @@ textarea {
 
 /* Footer */
 .footer {
-  background-color: #222;
+  background-color: #4b3c3c;
   color: #fff;
   text-align: center;
   padding: 20px;
