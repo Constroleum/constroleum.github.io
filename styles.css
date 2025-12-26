@@ -392,6 +392,7 @@ a.link {
 
 /* Sobre mí */
 .about {
+  max-width: 1600 px;
   padding: 50px 20px;
   background-color: #f0f0f0;
   text-align: center;
@@ -420,7 +421,7 @@ a.link {
 }
 
 .about-text {
-  max-width: 600px;
+  max-width: 1200px;
 }
 
 .about-text h2 {
