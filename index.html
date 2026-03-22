@@ -166,11 +166,22 @@
     }
 
     /* Stagger children */
-    .rule       { animation: fadeUp 0.8s 0.1s both; }
-    .name       { animation: fadeUp 0.8s 0.25s both; }
-    .tagline    { animation: fadeUp 0.8s 0.4s both; }
-    .lang-grid  { animation: fadeUp 0.8s 0.6s both; }
-    .location   { animation: fadeUp 0.8s 0.8s both; }
+    .rule         { animation: fadeUp 0.8s 0.1s both; }
+    .landing-logo { animation: fadeUp 0.8s 0.18s both; }
+    .name         { animation: fadeUp 0.8s 0.25s both; }
+    .tagline      { animation: fadeUp 0.8s 0.4s both; }
+    .lang-grid    { animation: fadeUp 0.8s 0.6s both; }
+    .location     { animation: fadeUp 0.8s 0.8s both; }
+
+    .landing-logo {
+      display: block;
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      margin: 0 auto 1.2rem;
+      filter: brightness(0) invert(1);
+      opacity: 0.9;
+    }
   </style>
 </head>
 <body>
@@ -180,6 +191,8 @@
 <main class="wrap" role="main">
 
   <div class="rule"></div>
+
+  <img src="images/logo.png" alt="Pere Lluís León" class="landing-logo">
 
   <h1 class="name">Pere Lluís <em>León</em></h1>
   <p class="tagline">Pintor Expresionista Contemporáneo · Barcelona</p>

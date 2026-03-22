@@ -103,6 +103,8 @@ body.hovering .cursor-ring { width: 56px; height: 56px; border-color: var(--acce
   text-transform: uppercase;
   color: var(--white);
   animation: fadeIn .6s .2s both;
+  text-align: center;
+  padding-left: .3em; /* compensate letter-spacing optical shift */
 }
 .loader-bar {
   height: 1px; background: var(--accent);
@@ -130,8 +132,18 @@ nav.site-nav {
   font-weight: 300;
   letter-spacing: .1em;
   color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: .7rem;
 }
 .nav-logo em { font-style: italic; color: var(--accent); }
+
+.nav-logo-img {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
 
 .nav-links {
   display: flex;
