@@ -1,194 +1,243 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Pere Lluís León | Expressionist Painter in Barcelona</title>
-
-  <meta name="description" content="Pere Lluís León is an expressionist painter based in Premià de Mar, Barcelona. Discover original contemporary paintings, exhibitions and artworks for collectors.">
-
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="images/logo.png">
-
+  <title>Pere Lluís León — Pintor Expresionista · Barcelona</title>
+  <meta name="description" content="Pere Lluís León, pintor expresionista contemporáneo de Barcelona. Selecciona tu idioma para explorar su obra.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://perelluisleon.art/">
+  <link rel="alternate" hreflang="es" href="https://perelluisleon.art/es/">
+  <link rel="alternate" hreflang="ca" href="https://perelluisleon.art/ca/">
+  <link rel="alternate" hreflang="fr" href="https://perelluisleon.art/fr/">
+  <link rel="alternate" hreflang="en" href="https://perelluisleon.art/en/">
+  <link rel="alternate" hreflang="zh" href="https://perelluisleon.art/zh/">
   <!-- Open Graph -->
-  <meta property="og:title" content="Pere Lluís León | Expressionist Painter in Barcelona">
-  <meta property="og:description" content="Discover original paintings and exhibitions by Pere Lluís León, expressionist artist based in Barcelona.">
-  <meta property="og:image" content="https://perelluisleon.art/images/gat%20a%20la%20finestra.jpg">
-  <meta property="og:url" content="https://www.perelluisleon.art">
+  <meta property="og:title" content="Pere Lluís León — Pintor Expresionista Contemporáneo">
+  <meta property="og:description" content="Obra expresionista contemporánea desde Barcelona. Colección La vida en colors.">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://perelluisleon.art/">
+  <meta property="og:image" content="images/gallery/Laberint-musical.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Pere Lluís León",
-    "jobTitle": "Expressionist Painter",
-    "url": "https://www.perelluisleon.art",
-    "sameAs": ["https://www.instagram.com/perelluisleon"],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Premià de Mar",
-      "addressRegion": "Barcelona",
-      "addressCountry": "ES"
+    :root {
+      --black:  #080808;
+      --white:  #f0ede8;
+      --muted:  #666;
+      --accent: #c8a96e;
+      --border: #222;
     }
-  }
-  </script>
+
+    html, body {
+      height: 100%;
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Background image — faint */
+    .bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/gallery/Laberint-musical.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.07;
+      filter: grayscale(100%);
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      animation: fadeUp 1s ease both;
+    }
+
+    /* Thin rule */
+    .rule {
+      width: 40px;
+      height: 1px;
+      background: var(--accent);
+      margin: 0 auto 2.4rem;
+    }
+
+    .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 6vw, 4.2rem);
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .name em {
+      font-style: italic;
+      color: rgba(240,237,232,0.5);
+    }
+
+    .tagline {
+      font-size: 0.62rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4rem;
+    }
+
+    /* Language grid */
+    .lang-grid {
+      display: flex;
+      gap: 2px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .lang-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 90px;
+      padding: 1.4rem 0.8rem;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      text-decoration: none;
+      transition: border-color 0.3s, color 0.3s, background 0.3s;
+      cursor: pointer;
+    }
+
+    .lang-link:hover {
+      border-color: var(--accent);
+      color: var(--white);
+      background: rgba(200,169,110,0.06);
+    }
+
+    .lang-code {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1;
+    }
+
+    .lang-name {
+      font-size: 0.52rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    /* location line */
+    .location {
+      font-size: 0.58rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #333;
+    }
+
+    .location span {
+      color: #444;
+      margin: 0 0.6rem;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Stagger children */
+    .rule       { animation: fadeUp 0.8s 0.1s both; }
+    .name       { animation: fadeUp 0.8s 0.25s both; }
+    .tagline    { animation: fadeUp 0.8s 0.4s both; }
+    .lang-grid  { animation: fadeUp 0.8s 0.6s both; }
+    .location   { animation: fadeUp 0.8s 0.8s both; }
+  </style>
 </head>
 <body>
-    <!-- Encabezado -->
-    <header class="header">
-      <a href="index.html" class="logo-link">
-        <div class="logo-container">
-          <img src="images/logo.png" alt="Logo de Pere Lluís León" class="logo-img">
-          <div class="logo-text">Pere Lluís León</div>
-        </div>
-      </a>
-      <button class="hamburger" aria-label="Abrir menú">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="nav-menu">
-        <ul class="nav-links">
-          <li><a href="index.html">home</a></li>
-          <li><a href="gallery.html">gallery</a></li>
-          <li><a href="exhibitions.html">Exhibitions</a></li>
-          <li><a href="contact.html">contact</a></li>
-          <li><a href="press.html">press</a></li>
-        </ul>
-      </nav>
-    </header>
 
-  <!-- Sección Hero (Video de portada) -->
-  <section id="home" class="hero">
-    <div class="video-background">
-      <video autoplay="" muted="" loop="" id="hero-video">
-        <source src="videos/Artek.mp4" type="video/mp4">
-        Tu navegador no soporta el formato de video.
-      </video>
-    </div>
+<div class="bg" aria-hidden="true"></div>
 
-    <div class="hero-text">
-      <div class="hero-overlay"></div>
-      <h1>Pere Lluís León</h1>
-      <h2><span class="highlight">Contemporary Expressionist Painting in Barcelona</span></h2>
-      <p>Pere Lluís León is a contemporary expressionist painter whose work explores
-    the human condition through color, form and Mediterranean light...</p>
-      <a href="gallery.html" class="btn">Explore Gallery</a>
-    </div>
-  </section>
+<main class="wrap" role="main">
 
-   <!-- Galería -->
-   <section id="gallery" class="gallery">
-    <h2 class="gallery__title">Collection: La vida en colors (Life among colors)</h2>
-    <div class="gallery__content">
-      
-  <div class="item" style="background-image: url('images/La guitarra.jpg')" alt="Expressionist painting by Pere Lluís León">
-    <div class="overlay">
-      <div class="item-details">
-        <a href="gallery.html" class="btn-offer">Explore full collection</a>
-      </div>
-    </div>
-  </div>
-  <div class="item" style="background-image: url('images/Eva postindustrial.jpg')" alt="Expressionist painting by Pere Lluís León">
-    <div class="overlay">
-      <div class="item-details">
-        <a href="gallery.html" class="btn-offer">Explore full collection</a>
-      </div>
-    </div>
-  </div>
-  <div class="item" style="background-image: url('images/Cap\ de\ dona.jpg')" alt="Expressionist painting by Pere Lluís León">
-    <div class="overlay">
-      <div class="item-details">
-        <a href="gallery.html" class="btn-offer">Explore full collection</a>
-      </div>
-    </div>
-  </div>
-      </div><!-- Agregar más ítems aquí con la misma estructura -->
-    </div>
-  </section>
+  <div class="rule"></div>
 
-  <!-- Sobre mí -->
-  <section id="about" class="about">
-    <div class="about-content">
-      <div class="about-image">
-        <img src="images/Perfil.jpg" alt="Pere Lluís León">
-      </div>
-      <div class="about-text">
-        <h2>Biography</h2>
-        <p>
-          Pere Lluís León lives in Premià de Mar, a small seaside town near
-          Barcelona. He began his drawing studies at a very young age, at a
-          small private academy in Barcelona. Later, his undeniable vocation
-          drove him to enroll at the Llotja School to study illustration.
-          Subsequently, he studied drawing and painting at the Barcelona
-          Massana Arts School. Never losing sight of a clear vocation for
-          graphic arts, after a while he moved to Paris, Brussels, and
-          Rotterdam where he alternated work with painting studies. Upon
-          returning to Barcelona, he began working as a medical illustrator
-          for laboratory advertising. He started collaborating with the
-          Faculty of Medicine at Bellvitge, creating didactic anatomical
-          illustrations for student research. It was then, when he specialized
-          in medical and surgical illustration, also collaborating with the
-          Clínic Hospital, Esperança Hospital, Vall d'Hebron, UAB, 12 de
-          Octubre University Hospital, Faculty of Medicine in Barcelona,
-          Lapeyronie Hospital in Montpellier, as well as for professors,
-          professors, surgeons, and editors of medical books and specialized
-          journals worldwide. Throughout his professional career, thousands of
-          illustrations have been published in medical books and scientific
-          journals. Currently, he alternates his medical work with graphic
-          design and painting.
-        </p>
-      </div>
-      <div class="about-text">
-        <h2>Exhibitions</h2>
-        <p>
-          • Sala Rusiñol, Sant Cugat del Vallès (Barcelona)
-          • Faculty of Medicine of Barcelona, exhibition of artistic medical
-          work and surgical techniques. • Hospital Clínic de Barcelona,
-          exhibition of artistic medical themes. • Vall d'Hebron Hospital,
-          exhibition of abstract work. • Parc Taulí Hospital in Sabadell,
-          exhibition of artistic medical work. • Official College of
-          Physicians of Barcelona, exhibition of artistic medical work and
-          surgical techniques. • Library of the Faculty of Medicine of Girona,
-          exhibition of medical work, anatomy, and surgical techniques. •
-          Official College of Physicians of Girona, exhibition of artistic
-          medical work. • Irla Museum House in Sant Feliu de Guixols, abstract
-          expressionism work. • Premiart Room in Premià de Mar, abstract
-          expressionism work. • Cartón, exhibition room in Barcelona, abstract
-          expressionism work. • Drawing Fair in Figueres, Drawing Fair in Sant
-          Antoni de Calonge, Drawing Fair in Sant Feliu de Guixols, Drawing
-          Fair in Canet de Mar, 1st prize at the painting exhibition of the
-          Premià de Mar major festival. • Drawing and painting fair in
-          Perpignan. • Exhibition Hall of the Calella Town Hall, July-August
-          2021. • Exhibition Hall Casa Saladrigas - Blanes Town Hall, from
-          October 15 to November 6, 2021. • Participation and selection in the
-          Premi Agbar International Art Contest, Barcelona. • CT ART GALLERY -
-          Reus, from December 3 to December 30, 2021. • From April 4 to April
-          30, 2022, Exhibition Hall of the Ajuntament de Llançà. • From August
-          2 to August 27, 2022, Exhibition Hall Ajuntament Vell de Begur. •
-          From May 3 to May 28, 2022, Cultural Center Calisay - Arenys de Mar.
-          • From September 3 to September 29, group exhibition at BCM Gallery
-          in Barcelona. • From October 24 to November 20, 2023, exhibition at
-          Galería Escolà Mar in Barcelona. • From December 12 to January 8,
-          2024, collective exhibition of small format • Neopristo • Art·Tek Gallery Barcelona
-        </p>
-      </div>
-    </div>
-  </section>
+  <h1 class="name">Pere Lluís <em>León</em></h1>
+  <p class="tagline">Pintor Expresionista Contemporáneo · Barcelona</p>
 
-  </section><footer class="footer">
-    <p>© 2025 Pere Lluís León. Todos los derechos reservados.</p>
-  </footer>
+  <nav class="lang-grid" aria-label="Selección de idioma">
 
-  <script src="script.js" defer></script>
+    <a class="lang-link" href="es/index.html" hreflang="es" lang="es" aria-label="Español">
+      <span class="lang-code">Es</span>
+      <span class="lang-name">Español</span>
+    </a>
 
+    <a class="lang-link" href="ca/index.html" hreflang="ca" lang="ca" aria-label="Català">
+      <span class="lang-code">Ca</span>
+      <span class="lang-name">Català</span>
+    </a>
 
-</body></html>
+    <a class="lang-link" href="fr/index.html" hreflang="fr" lang="fr" aria-label="Français">
+      <span class="lang-code">Fr</span>
+      <span class="lang-name">Français</span>
+    </a>
 
+    <a class="lang-link" href="en/index.html" hreflang="en" lang="en" aria-label="English">
+      <span class="lang-code">En</span>
+      <span class="lang-name">English</span>
+    </a>
+
+    <a class="lang-link" href="zh/index.html" hreflang="zh" lang="zh" aria-label="中文">
+      <span class="lang-code">中文</span>
+      <span class="lang-name">Mandarin</span>
+    </a>
+
+  </nav>
+
+  <p class="location">
+    Premià de Mar <span>·</span> Barcelona <span>·</span> España
+  </p>
+
+</main>
+
+<!-- Structured data for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Pere Lluís León",
+  "jobTitle": "Pintor expresionista contemporáneo",
+  "url": "https://perelluisleon.art",
+  "image": "https://perelluisleon.art/images/Perfil.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Premià de Mar",
+    "addressRegion": "Barcelona",
+    "addressCountry": "ES"
+  },
+  "sameAs": [
+    "https://instagram.com/perelluisleon",
+    "https://facebook.com/perelluisleon"
+  ]
+}
+</script>
+
+</body>
+</html>
