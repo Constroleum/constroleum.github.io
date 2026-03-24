@@ -13,7 +13,7 @@
   --surface: #181818;
   --border:  #242424;
   --muted:   #ffffff;
-  --mid:     #c0bdb8;
+  --mid:     #fdfdfd;
   --light:   #dedbd6;
   --white:   #f0ede8;
   --accent:  #f7a409;
@@ -97,7 +97,7 @@ body.hovering .cursor-ring { width: 56px; height: 56px; border-color: var(--acce
 
 .loader-name {
   font-family: var(--font-serif);
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   font-weight: 300;
   letter-spacing: .3em;
   text-transform: uppercase;
@@ -128,7 +128,7 @@ nav.site-nav {
 
 .nav-logo {
   font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: .1em;
   color: var(--white);
