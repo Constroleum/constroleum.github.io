@@ -16,7 +16,7 @@
   --mid:     #c0bdb8;
   --light:   #dedbd6;
   --white:   #f0ede8;
-  --accent:  #c8a96e;
+  --accent:  #f7a409;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans:  'Montserrat', 'Helvetica Neue', sans-serif;
   --nav-h: 64px;
@@ -152,7 +152,7 @@ nav.site-nav {
 }
 
 .nav-links a {
-  font-size: .6rem;
+  font-size: .8rem;
   letter-spacing: .22em;
   text-transform: uppercase;
   color: var(--muted);
