@@ -519,8 +519,8 @@ footer.site-footer a:hover { color: var(--accent); }
   font-size: .52rem;
   letter-spacing: .14em;
   text-transform: uppercase;
-  background: rgba(200,169,110,.92);
-  color: var(--black);
+  background: rgba(250, 162, 0, 0.92);
+  color: var(--white);
   padding: .28rem .6rem;
 }
 
