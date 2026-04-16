@@ -23,7 +23,7 @@
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-html { font-size: 15px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+html { font-size: 17px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
 
 body {
   background: var(--black);
@@ -282,13 +282,13 @@ footer.site-footer a:hover { color: var(--accent); }
   margin-bottom: .8rem;
   animation: slideUp .7s .4s both;
 }
-.slide-title em { font-style: italic; color: rgba(240,237,232,.55); }
+.slide-title em { font-style: italic; color: rgba(240,237,232,.8); }
 
 .slide-sub {
-  font-size: .62rem;
+  font-size: .78rem;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: var(--mid);
+  color: var(--white);
   animation: slideUp .7s .6s both;
 }
 
@@ -411,10 +411,10 @@ footer.site-footer a:hover { color: var(--accent); }
 }
 
 .page-header-meta p {
-  font-size: .6rem;
+  font-size: .75rem;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--white);
   line-height: 2;
   text-align: right;
 }
@@ -654,9 +654,9 @@ footer.site-footer a:hover { color: var(--accent); }
   color: var(--white); margin-bottom: 1.6rem;
   animation: slideUp .7s .5s both;
 }
-.about-h1 em { font-style: italic; color: rgba(240,237,232,.5); }
+.about-h1 em { font-style: italic; color: rgba(240,237,232,.75); }
 .about-hero-p {
-  font-size: .85rem; line-height: 1.9; color: var(--mid);
+  font-size: 1rem; line-height: 1.9; color: var(--white);
   animation: slideUp .7s .7s both;
 }
 
@@ -672,7 +672,7 @@ footer.site-footer a:hover { color: var(--accent); }
   color: var(--white); margin-bottom: 2rem; grid-column: 1 / -1;
 }
 .bio-text p {
-  font-size: .88rem; line-height: 1.9; color: var(--mid); margin-bottom: 1.3rem;
+  font-size: 1rem; line-height: 1.9; color: var(--white); margin-bottom: 1.3rem;
 }
 .bio-stats { display: flex; flex-direction: column; gap: 1.8rem; }
 .bio-stat { border-top: 1px solid var(--border); padding-top: 1.2rem; }
@@ -698,8 +698,8 @@ footer.site-footer a:hover { color: var(--accent); }
 }
 .ex-item:first-child { border-top: 1px solid var(--border); }
 .ex-year { font-family: var(--font-serif); font-size: .82rem; font-weight: 300; color: var(--accent); padding-top: .1rem; }
-.ex-detail { font-size: .8rem; line-height: 1.6; color: var(--mid); }
-.ex-detail strong { display: block; color: var(--light); font-weight: 300; margin-bottom: .1rem; font-family: var(--font-serif); font-size: .92rem; }
+.ex-detail { font-size: .95rem; line-height: 1.6; color: var(--white); }
+.ex-detail strong { display: block; color: var(--white); font-weight: 400; margin-bottom: .1rem; font-family: var(--font-serif); font-size: 1.05rem; }
 
 /* ═══════════════════════════════
    CONTACT
@@ -725,7 +725,7 @@ footer.site-footer a:hover { color: var(--accent); }
   font-weight: 300; font-style: italic;
   color: var(--white); line-height: 1.1; margin-bottom: .8rem;
 }
-.contact-img-text p { font-size: .8rem; line-height: 1.8; color: var(--mid); }
+.contact-img-text p { font-size: .95rem; line-height: 1.8; color: var(--white); }
 
 .contact-info {
   padding: calc(var(--nav-h) + 3.5rem) 3.5rem 3.5rem;
@@ -825,9 +825,9 @@ footer.site-footer a:hover { color: var(--accent); }
 }
 
 .press-card-desc {
-  font-size: .85rem;
+  font-size: 1rem;
   line-height: 1.75;
-  color: var(--mid);
+  color: var(--white);
   flex: 1;
 }
 
@@ -869,9 +869,9 @@ footer.site-footer a:hover { color: var(--accent); }
 }
 
 .press-contact-desc {
-  font-size: .9rem;
+  font-size: 1rem;
   line-height: 1.7;
-  color: var(--mid);
+  color: var(--white);
   max-width: 52ch;
 }
 
