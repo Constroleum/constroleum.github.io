@@ -501,7 +501,7 @@ footer.site-footer a:hover { color: var(--accent); }
 .work-card-price {
   position: absolute;
   top: 1rem; right: 1rem;
-  font-size: .56rem;
+  font-size: .9rem;
   letter-spacing: .1em;
   text-transform: uppercase;
   background: rgba(8,8,8,.8);
@@ -516,7 +516,7 @@ footer.site-footer a:hover { color: var(--accent); }
 .sold-badge {
   position: absolute;
   top: 1rem; left: 1rem;
-  font-size: .52rem;
+  font-size: .9rem;
   letter-spacing: .14em;
   text-transform: uppercase;
   background: rgba(250, 162, 0, 0.92);
