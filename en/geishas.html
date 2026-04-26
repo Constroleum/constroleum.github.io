@@ -287,20 +287,28 @@
   <p>© 2025 Pere Lluís León · <a href="https://perelluisleon.art">perelluisleon.art</a></p>
 </footer>
 
-<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Obra ampliada">
-  <button class="lb-close" aria-label="Tancar">✕</button>
-  <div class="lb-img-wrap">
-    <img src="" alt="" id="lb-img">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Artwork detail">
+  <div class="lb-header">
+    <span class="lb-header-title" id="lb-htitle"></span>
+    <button class="lb-close" id="lb-close">Close</button>
   </div>
-  <div class="lb-info">
-    <p class="lb-title" id="lb-title"></p>
-    <p class="lb-dims" id="lb-dims"></p>
-    <p class="lb-price" id="lb-price"></p>
+  <div class="lb-body">
+    <div class="lb-img-wrap"><img id="lb-img" src="" alt=""></div>
+    <div class="lb-sidebar">
+      <div><div class="lb-label">Work</div><div class="lb-val lg" id="lb-title"></div></div>
+      <div class="lb-divider"></div>
+      <div><div class="lb-label">Dimensions</div><div class="lb-val" id="lb-dims"></div></div>
+      <div><div class="lb-label">Medium</div><div class="lb-val">Acrylic on canvas</div></div>
+      <div><div class="lb-label">Collection</div><div class="lb-val">Geishas</div></div>
+      <div class="lb-divider"></div>
+      <div><div class="lb-label">Price</div><div class="lb-price" id="lb-price"></div></div>
+      <a href="contact.html" class="lb-cta" id="lb-cta">Enquire about this work</a>
+    </div>
   </div>
   <div class="lb-nav">
-    <button class="lb-nav-btn" id="lb-prev" aria-label="Anterior">←</button>
-    <span class="lb-nav-counter"><span id="lb-cur">1</span> / <span id="lb-tot">1</span></span>
-    <button class="lb-nav-btn" id="lb-next" aria-label="Següent">→</button>
+    <button class="lb-nav-btn" id="lb-prev">← Previous</button>
+    <span class="lb-nav-counter" id="lb-counter"></span>
+    <button class="lb-nav-btn" id="lb-next">Next →</button>
   </div>
 </div>
 
