@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- === ESPAÑOL === -->
+  <url>
+    <loc>https://perelluisleon.art/es/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://perelluisleon.art/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://perelluisleon.art/ca/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://perelluisleon.art/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://perelluisleon.art/fr/index.html"/>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://perelluisleon.art/es/gallery.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://perelluisleon.art/es/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://perelluisleon.art/ca/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://perelluisleon.art/en/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://perelluisleon.art/fr/gallery.html"/>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://perelluisleon.art/es/geishas.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://perelluisleon.art/es/geishas.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://perelluisleon.art/ca/geishas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://perelluisleon.art/en/geishas.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://perelluisleon.art/fr/geishas.html"/>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://perelluisleon.art/es/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://perelluisleon.art/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://perelluisleon.art/ca/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://perelluisleon.art/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://perelluisleon.art/fr/about.html"/>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://perelluisleon.art/es/press.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://perelluisleon.art/es/contact.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- === CATALÀ === -->
+  <url>
+    <loc>https://perelluisleon.art/ca/index.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://perelluisleon.art/ca/gallery.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://perelluisleon.art/ca/geishas.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://perelluisleon.art/ca/about.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- === ENGLISH === -->
+  <url>
+    <loc>https://perelluisleon.art/en/index.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://perelluisleon.art/en/gallery.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://perelluisleon.art/en/geishas.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://perelluisleon.art/en/about.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- === FRANÇAIS === -->
+  <url>
+    <loc>https://perelluisleon.art/fr/index.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://perelluisleon.art/fr/gallery.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://perelluisleon.art/fr/geishas.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

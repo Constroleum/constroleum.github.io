@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://perelluisleon.art/sitemap.xml
+
+# Crawl-delay para ser amable con los servidores
+Crawl-delay: 1
