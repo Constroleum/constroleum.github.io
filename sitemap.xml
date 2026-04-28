@@ -29,6 +29,7 @@
     <xhtml:link rel="alternate" hreflang="ca" href="https://perelluisleon.art/ca/geishas.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://perelluisleon.art/en/geishas.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://perelluisleon.art/fr/geishas.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://perelluisleon.art/zh/geishas.html"/>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -124,6 +125,14 @@
   <url>
     <loc>https://perelluisleon.art/fr/geishas.html</loc>
     <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- === 中文 === -->
+  <url>
+    <loc>https://perelluisleon.art/zh/geishas.html</loc>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
